@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Akiko Yamamura</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       Navigation
+       ============================================================ -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">Portfolio</a>
+      <nav class="nav__links">
+        <a href="about.html">About</a>
+        <a href="midjourney.html">Midjourney</a>
+        <a href="project proposal.html">Project proposal</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       Contact Main
+       ============================================================ -->
+  <main class="contact-main" id="contact">
+
+    <!-- Heading -->
+    <div class="contact-main__header container">
+      <span class="contact-main__label">Get in touch</span>
+      <h1 class="contact-main__title">お問い合わせ</h1>
+      <span class="contact-main__rule"></span>
+      <p class="contact-main__desc">
+        プロジェクトのご相談や、作品に関するお問い合わせは下記よりお願いいたします。<br>
+        通常２〜３営業日以内に返信させていただきます。
+      </p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="contact-main__form-outer container">
+      <form class="contact-form" action="#" method="post" novalidate>
+
+        <div class="contact-form__field">
+          <label for="name">NAME / お名前</label>
+          <input type="text" id="name" name="name" placeholder="山田 太郎" autocomplete="name">
+        </div>
+
+        <div class="contact-form__field">
+          <label for="email">EMAIL / メールアドレス</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" autocomplete="email">
+        </div>
+
+        <div class="contact-form__field">
+          <label for="message">MESSAGE / お問い合わせ内容</label>
+          <textarea id="message" name="message" rows="5" placeholder="メッセージをご入力ください"></textarea>
+        </div>
+
+        <div class="contact-form__actions">
+          <button type="submit" class="contact-form__btn">SEND MESSAGE</button>
+          <p class="contact-form__privacy">BY SUBMITTING YOU AGREE TO OUR PRIVACY POLICY.</p>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <span class="site-footer__name">AKIKO YAMAMURA</span>
+      <nav class="site-footer__links">
+        <a href="https://www.facebook.com/akiko.yamamura.12/" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+        <a href="https://www.instagram.com/akiko959/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+        <a href="https://x.com/renge_353" target="_blank" rel="noopener noreferrer">X</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 AKIKO YAMAMURA. ALL RIGHTS RESERVED</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav__links');
+      const isOpen = navLinks.classList.toggle('nav__links--open');
+      document.querySelector('.hamburger').textContent = isOpen ? '✕' : '☰';
+    }
+    document.querySelectorAll('.nav__links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav__links').classList.remove('nav__links--open');
+        document.querySelector('.hamburger').textContent = '☰';
+      });
+    });
+  </script>
+
+</body>
+</html>

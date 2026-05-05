@@ -1,0 +1,385 @@
+/* ============================================================
+   Midjourney Works — Akiko Yamamura
+   ============================================================ */
+
+/* ── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+  line-height: 1.6;
+}
+
+img { display: block; max-width: 100%; }
+a   { text-decoration: none; color: inherit; }
+ul  { list-style: none; }
+
+/* ── Variables ────────────────────────────────────────────── */
+:root {
+  --accent:    #9B7A56;
+  --dark:      #1a1a1a;
+  --mid:       #555555;
+  --light:     #999999;
+  --bg-grey:   #F5F3EF;
+  --footer-bg: #232121;
+}
+
+/* ── Container ────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* ── Footer name ──────────────────────────────────────────── */
+.footer__name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.88rem;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+/* ── Shared label ─────────────────────────────────────────── */
+.label {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav__inner {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--dark);
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--dark);
+  padding-bottom: 1px;
+}
+
+.nav__links {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.nav__links a {
+  font-size: 0.78rem;
+  color: #555;
+  letter-spacing: 0.04em;
+  padding-bottom: 2px;
+  border-bottom: 1px dashed transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  color: var(--dark);
+  border-bottom-color: var(--dark);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--dark);
+  padding: 4px;
+  line-height: 1;
+}
+
+/* ============================================================
+   Page Header
+   ============================================================ */
+.mj-header {
+  background: var(--bg-grey);
+  padding: 64px 0 56px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.mj-header__inner {
+  /* 縦積みレイアウト */
+}
+
+.mj-header__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-top: 0.5rem;
+  margin-bottom: 2.4rem;
+}
+
+/* 本文 + Digital Monograph: 左右に分割 */
+.mj-header__bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.mj-header__text {
+  font-size: 0.82rem;
+  color: var(--mid);
+  line-height: 1.9;
+  max-width: 520px;
+}
+
+.mj-header__mono {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  color: #888;
+  text-align: right;
+  line-height: 1.5;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   Gallery Grid
+   ============================================================ */
+.mj-gallery {
+  background: #fff;
+  padding: 72px 0 100px;
+}
+
+.mj-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 48px;
+}
+
+/* 各アイテム */
+.mj-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 画像リンク */
+.mj-item__link {
+  display: block;
+  overflow: hidden;
+}
+
+.mj-item__link img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.mj-item__link:hover img {
+  transform: scale(1.04);
+}
+
+/* タグ */
+.mj-item__tag {
+  display: block;
+  font-size: 0.55rem;
+  color: var(--light);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 0.7rem;
+}
+
+/* キャプション */
+.mj-item__caption {
+  font-size: 0.82rem;
+  color: var(--dark);
+  margin-top: 0.28rem;
+  font-weight: 400;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  background: var(--footer-bg);
+  padding: 22px 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__copy {
+  font-size: 0.64rem;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.05em;
+}
+
+.footer__links {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.footer__links a {
+  font-size: 0.66rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.footer__links a:hover { color: #fff; }
+
+/* ============================================================
+   Mobile — max-width: 767px
+   ============================================================ */
+@media (max-width: 767px) {
+
+  /* ─ Container ─ */
+  .container { padding: 0 16px; }
+
+  /* ─ Navigation ─ */
+  .nav__inner {
+    height: auto;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+  }
+
+  .nav__links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    order: 3;
+    padding-top: 6px;
+    gap: 0;
+  }
+
+  .nav__links.nav__links--open { display: flex; }
+
+  .nav__links a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.88rem;
+  }
+
+  .hamburger { display: block; }
+
+  /* ─ Page Header ─ */
+  .mj-header {
+    padding: 28px 0 24px;
+  }
+
+  .mj-header__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mj-header__title {
+    font-size: 2.4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  .mj-header__inner .label {
+    order: 2;
+    margin-top: 0.5rem;
+  }
+
+  .mj-header__bottom {
+    order: 3;
+    display: none;
+  }
+
+  /* ─ Gallery ─ */
+  .mj-gallery {
+    padding: 32px 0 48px;
+  }
+
+  .mj-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 24px;
+  }
+
+  .mj-item__tag {
+    font-size: 0.46rem;
+    margin-top: 0.5rem;
+  }
+
+  .mj-item__caption { font-size: 0.72rem; }
+
+  /* ─ Footer ─ */
+  .footer {
+    background: var(--footer-bg);
+    padding: 44px 0 32px;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  .footer__name {
+    display: block;
+    order: 1;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .footer__links {
+    order: 2;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .footer__links a {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.62rem;
+  }
+
+  .footer__copy {
+    order: 3;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.56rem;
+    letter-spacing: 0.04em;
+  }
+}

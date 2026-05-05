@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Akiko Yamamura</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       Navigation
+       ============================================================ -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">Portfolio</a>
+      <nav class="nav__links">
+        <a href="about.html">About</a>
+        <a href="midjourney.html">Midjourney</a>
+        <a href="project proposal.html">Project proposal</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       Hero
+       ============================================================ -->
+  <section class="hero">
+    <img
+      class="hero__img"
+      src="images_portfolio/Organize(16).jpg"
+      alt="Design, Planning and AI — crowned lion with cherry blossoms"
+    >
+    <div class="hero__overlay"></div>
+    <div class="hero__text">
+      <h1 class="hero__title">Design, Planning,<br>and AI.</h1>
+      <p class="hero__sub">#PORTFOLIO</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       About
+       ============================================================ -->
+  <section class="about" id="about">
+    <div class="about__inner container">
+
+      <!-- 縦書きテキスト -->
+      <div class="about__left">
+        <span class="about__vertical">AKIKO YAMAMURA</span>
+        <div class="about__body">
+          <h2><a href="about.html">AIとビジュアルを組み合わせ、
+企画を「伝わる形」に設計するクリエイティブプランナー。</a></h2>
+          <p>
+            Claude・ChatGPT・Midjourney——複数のAIを使い分けながら、企画の構想からビジュアルの生成まで一気通貫で動かす。コンセプト設計からビジュアル制作まで一貫して行い、
+広報・マーケティングにおいて、
+人に届く表現へと落とし込みます。
+
+          </p>
+          <div class="about__expertise">
+            <span class="label">EXPERTISE</span>
+            <span class="about__skills">Creative Strategy | Midjourney Visual Direction | Proposal Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ライオン画像 -->
+      <div class="about__right">
+        <a href="about.html" class="about__img-wrap">
+          <img
+            class="about__img"
+            src="images_portfolio/整理する (26).png"
+            alt="Lion portrait in sepia"
+          >
+          <div class="about__caption">
+            <p>"Science is the ultimate luxury in design."</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Gallery / Midjourney
+       ============================================================ -->
+  <section class="gallery" id="midjourney">
+    <div class="gallery__inner container">
+
+      <div class="gallery__head">
+        <div>
+          <span class="label">AI CREATIVE WORKS</span>
+          <h2 class="gallery__title"><a href="midjourney.html">Midjourney作品集</a></h2>
+        </div>
+        <a href="#" class="gallery__all">VIEW ALL WORKS</a>
+      </div>
+
+      <div class="gallery__grid">
+
+        <a href="midjourney.html" class="gallery__item">
+          <img src="images_portfolio/整理する (33).png" alt="女の子">
+          <span class="gallery__tag">GIRL</span>
+          <p class="gallery__caption">女の子</p>
+        </a>
+
+        <a href="midjourney.html" class="gallery__item">
+          <img src="images_portfolio/整理する (17).png" alt="子供">
+          <span class="gallery__tag">CHILD</span>
+          <p class="gallery__caption">子供</p>
+        </a>
+
+        <a href="midjourney.html" class="gallery__item">
+          <img src="images_portfolio/整理する (19).png" alt="キリン">
+          <span class="gallery__tag">GIRAFFE</span>
+          <p class="gallery__caption">キリン</p>
+        </a>
+
+        <a href="midjourney.html" class="gallery__item">
+          <img src="images_portfolio/整理する (30).png" alt="子供・イラスト">
+          <span class="gallery__tag">CHILDREN'S ILLUSTRATIONS</span>
+          <p class="gallery__caption">子供・イラスト</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Proposal
+       ============================================================ -->
+  <section class="proposal" id="proposal">
+    <div class="proposal__inner container">
+
+      <a href="project%20proposal.html" class="proposal__img-wrap">
+        <img
+          class="proposal__img"
+          src="project proposal/nuron_hyousi01.jpg"
+          alt="ニューロン給食プロジェクト 概要書"
+        >
+      </a>
+
+      <div class="proposal__content">
+        <span class="label">PROPOSAL DESIGN</span>
+        <h2><a href="project%20proposal.html">一冊で、未来を提案する。</a></h2>
+        <p>
+          企画書は、ただの資料ではありません。読んだ人が次の一手を思い描けるよう、機能とビジュアルを一体設計しています。
+        </p>
+        <ul class="proposal__list">
+          <li>戦略・ビジュアル・世界観の三位一体</li>
+          <li>A4判 完全統合型フォーマット</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Contact
+       ============================================================ -->
+  <section class="contact" id="contact">
+    <div class="contact__inner container">
+
+      <h2><a href="contact.html">お問い合わせ</a></h2>
+      <p class="contact__sub">プロジェクトの相談やご質問など、お気軽にお問い合わせください。</p>
+
+      <form class="contact__form" action="#" method="post">
+
+        <div class="contact__row">
+          <div class="contact__field">
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+          </div>
+          <div class="contact__field">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+          </div>
+        </div>
+
+        <div class="contact__field">
+          <label for="message">メッセージ</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <div class="contact__submit">
+          <button type="submit">SEND MESSAGE →</button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Footer Shell
+       ============================================================ -->
+  <div class="footer-shell">
+    <span>Footer Shell</span>
+  </div>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer__inner container">
+      <span class="footer__name">AKIKO YAMAMURA</span>
+      <nav class="footer__links">
+        <a href="https://www.facebook.com/akiko.yamamura.12/" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+        <a href="https://www.instagram.com/akiko959/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+        <a href="https://x.com/renge_353" target="_blank" rel="noopener noreferrer">X</a>
+      </nav>
+      <span class="footer__copy">© 2026 AKIKO YAMAMURA. ALL RIGHTS RESERVED</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav__links');
+      const isOpen = navLinks.classList.toggle('nav__links--open');
+      document.querySelector('.hamburger').textContent = isOpen ? '✕' : '☰';
+    }
+    document.querySelectorAll('.nav__links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav__links').classList.remove('nav__links--open');
+        document.querySelector('.hamburger').textContent = '☰';
+      });
+    });
+  </script>
+
+</body>
+</html>

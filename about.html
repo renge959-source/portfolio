@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Akiko Yamamura</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Serif+JP:wght@300;400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       Navigation
+       ============================================================ -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">Portfolio</a>
+      <nav class="nav__links">
+        <a href="about.html" class="active">About</a>
+        <a href="midjourney.html">Midjourney</a>
+        <a href="project proposal.html">Project proposal</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       Introduction
+       ============================================================ -->
+  <section class="intro">
+
+    <!-- SP: ヒーロー画像（PCでは非表示） -->
+    <div class="intro__mobile-hero">
+      <img src="images_portfolio/整理する (2).png" alt="Lion portrait">
+    </div>
+
+    <div class="intro__inner container">
+
+      <span class="label intro__label">INTRODUCTION</span>
+      <h1 class="intro__name">Akiko Yamamura</h1>
+      <!-- SP: サブタイトル（PCでは非表示） -->
+      <p class="intro__subtitle">について</p>
+
+      <!-- PC: 装飾ウォーターマーク（SPでは非表示） -->
+      <div class="intro__watermark" aria-hidden="true">企<br>画</div>
+
+      <div class="intro__columns">
+
+        <!-- PC: 画像カラム（SPでは非表示） -->
+        <div class="intro__img-col">
+          <div class="intro__img-wrap">
+            <img
+              class="intro__img"
+              src="images_portfolio/整理する (2).png"
+              alt="Lion portrait"
+            >
+            <div class="intro__img-caption">「美しさは、削ぎ落とされた先に宿る。」</div>
+          </div>
+        </div>
+
+        <!-- テキストカラム -->
+        <div class="intro__text-col">
+          <div class="intro__card">
+            <h2 class="intro__tagline">
+              企画を書き、ビジュアルに落とす。AI Creative Planner.
+            </h2>
+            <p>
+              熊本を拠点に、AIとクリエイティブを組み合わせた企画・表現設計を行っています。アイデアを構想のままで終わらせず、ビジュアル・構造・ストーリーとして具体化し、「人に伝わる形」にすることを強みとしています。
+            </p>
+            <p>
+              Midjourneyによるビジュアル制作と、企画書作成を組み合わせることで、コンセプトの立案からアウトプットまで一貫して対応可能です。日常の気づきや社会課題から着想を得て、企画として整理し、視覚的に伝えることを大切にしています。
+            </p>
+            <p>
+              企画 &times; AI &times;ビジュアルを一貫して設計し、コンセプトを「伝わる形」に落とし込むことを強みとしています。広報・マーケティングにおいても、視覚と言語の両面から伝達設計を行うことが可能です。
+            </p>
+            <div class="intro__skills-block">
+              <span class="label">EXPERTISE &amp; SKILLS</span>
+              <div class="intro__tags">
+                <span class="tag">MidJourney</span>
+                <span class="tag">Claude</span>
+                 <span class="tag">Claude Code</span>
+                <span class="tag">ChatGPT</span>
+                <span class="tag">AIデザイン</span>
+                <span class="tag">企画制作</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       これまでの歩み / CHRONOLOGY
+       ============================================================ -->
+  <section class="timeline">
+    <div class="timeline__inner container">
+
+      <!-- SP: ラベル（PCでは非表示） -->
+      <span class="label timeline__label-sp">CHRONOLOGY</span>
+
+      <!-- PC: 見出しエリア（SPでは非表示） -->
+      <div class="timeline__head">
+        <h2 class="timeline__title">これまでの歩み</h2>
+        <p class="timeline__sub">単なるスキルの習得ではなく、企画を「伝わる形」に変換する力を磨いてきました。</p>
+      </div>
+
+      <div class="timeline__grid">
+
+        <div class="timeline__card">
+          <span class="timeline__date">2025 - 2026</span>
+          <h3 class="timeline__card-title">AIによる次世代思考</h3>
+          <p class="timeline__card-text">
+            ChatGPTを活用し、情報を整理しながら思考を構造化。課題に対して、「何を考えるべきか」を整理し、企画の土台を設計できるようになりました。
+          </p>
+        </div>
+
+        <div class="timeline__card">
+          <span class="timeline__date">2025・2026</span>
+          <h3 class="timeline__card-title">企画構造の設計</h3>
+          <p class="timeline__card-text">
+            AIとの対話を通じて、アイデアをClaude Codeで企画書として整理。課題・提案・価値を明確にし、第三者に伝わる構造で企画を組み立てる力を習得しました。
+          </p>
+        </div>
+
+        <div class="timeline__card">
+          <span class="timeline__date">2025・2026</span>
+          <h3 class="timeline__card-title">ビジュアルによる伝達</h3>
+          <p class="timeline__card-text">
+            Midjourneyを活用し、企画の内容を視覚化。抽象的なアイデアを一目で伝わる形に変換し、企画の説得力を高めています。
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Portfolio Preview / DISCOVER MORE
+       ============================================================ -->
+  <section class="preview">
+
+    <!-- SP: ラベル（PCでは非表示） -->
+    <div class="preview__sp-header container">
+      <span class="label">DISCOVER MORE</span>
+    </div>
+
+    <div class="preview__grid">
+
+      <a href="midjourney.html" class="preview__item">
+        <img
+          class="preview__img"
+          src="images_portfolio/整理する (6).png"
+          alt="Midjourney works"
+        >
+        <div class="preview__content">
+          <span class="preview__title">MIDJOURNEY</span>
+          <span class="preview__arrow">→</span>
+        </div>
+      </a>
+
+      <a href="project proposal.html" class="preview__item">
+        <img
+          class="preview__img"
+          src="images_portfolio/整理する (4).png"
+          alt="Project proposal"
+        >
+        <div class="preview__content">
+          <span class="preview__title">PROJECT PROPOSAL</span>
+          <span class="preview__arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner container">
+      <span class="footer__name">AKIKO YAMAMURA</span>
+      <nav class="footer__links">
+        <a href="https://www.facebook.com/akiko.yamamura.12/" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+        <a href="https://www.instagram.com/akiko959/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+        <a href="https://x.com/renge_353" target="_blank" rel="noopener noreferrer">X</a>
+      </nav>
+      <span class="footer__copy">© 2026 AKIKO YAMAMURA. ALL RIGHTS RESERVED</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav__links');
+      const isOpen = navLinks.classList.toggle('nav__links--open');
+      document.querySelector('.hamburger').textContent = isOpen ? '✕' : '☰';
+    }
+    document.querySelectorAll('.nav__links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav__links').classList.remove('nav__links--open');
+        document.querySelector('.hamburger').textContent = '☰';
+      });
+    });
+  </script>
+
+</body>
+</html>

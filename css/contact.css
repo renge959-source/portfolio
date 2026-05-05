@@ -1,0 +1,370 @@
+/* ============================================================
+   Contact — Akiko Yamamura
+   ============================================================ */
+
+/* ── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1a1a1a;
+  background: #F5F3EF;
+  line-height: 1.6;
+}
+
+img { display: block; max-width: 100%; }
+a   { text-decoration: none; color: inherit; }
+
+/* ── Variables ────────────────────────────────────────────── */
+:root {
+  --accent:     #9B7A56;
+  --dark:       #1a1a1a;
+  --mid:        #555555;
+  --light:      #999999;
+  --bg-grey:    #F5F3EF;
+  --footer-bg:  #232121;
+}
+
+/* ── Container ────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav__inner {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--dark);
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--dark);
+  padding-bottom: 1px;
+}
+
+.nav__links {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.nav__links a {
+  font-size: 0.78rem;
+  color: #555;
+  letter-spacing: 0.04em;
+  padding-bottom: 2px;
+  border-bottom: 1px dashed transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  color: var(--dark);
+  border-bottom-color: var(--dark);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--dark);
+  padding: 4px;
+  line-height: 1;
+}
+
+/* ============================================================
+   Contact Main
+   ============================================================ */
+.contact-main {
+  background: var(--bg-grey);
+  padding: 96px 0 140px;
+}
+
+/* ── Heading ── */
+.contact-main__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.contact-main__label {
+  display: block;
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.contact-main__title {
+  font-family: 'Noto Serif JP', 'Playfair Display', Georgia, serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.4rem;
+}
+
+.contact-main__rule {
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: var(--dark);
+  margin: 0 auto 1.8rem;
+}
+
+.contact-main__desc {
+  font-size: 0.84rem;
+  color: var(--mid);
+  line-height: 2;
+}
+
+/* ── Form Card ── */
+.contact-form {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 52px 64px 56px;
+  border: 1px solid #e8e4de;
+}
+
+/* ── Fields ── */
+.contact-form__field {
+  margin-bottom: 36px;
+}
+
+.contact-form__field label {
+  display: block;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.contact-form__field input,
+.contact-form__field textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #d4d0ca;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--dark);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form__field input::placeholder,
+.contact-form__field textarea::placeholder {
+  color: #bfbab4;
+}
+
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+  border-bottom-color: var(--accent);
+}
+
+.contact-form__field textarea {
+  resize: none;
+  height: 130px;
+  line-height: 1.75;
+  padding-top: 8px;
+}
+
+/* ── Submit ── */
+.contact-form__actions {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.contact-form__btn {
+  display: inline-block;
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  padding: 16px 56px;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-bottom: 18px;
+}
+
+.contact-form__btn:hover { opacity: 0.75; }
+
+.contact-form__privacy {
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  color: var(--light);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  background: var(--footer-bg);
+  padding: 56px 0 48px;
+}
+
+.site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-footer__name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.site-footer__links {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.site-footer__links a {
+  font-size: 0.64rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.site-footer__links a:hover { color: #fff; }
+
+.site-footer__copy {
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   Mobile — max-width: 767px
+   ============================================================ */
+@media (max-width: 767px) {
+
+  .container { padding: 0 16px; }
+
+  /* ─ Navigation ─ */
+  .nav__inner {
+    height: auto;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+  }
+
+  .nav__links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    order: 3;
+    padding-top: 6px;
+    gap: 0;
+  }
+
+  .nav__links.nav__links--open { display: flex; }
+
+  .nav__links a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.88rem;
+  }
+
+  .hamburger { display: block; }
+
+  /* ─ Contact Main ─ */
+  .contact-main {
+    padding: 56px 0 80px;
+  }
+
+  .contact-main__header {
+    margin-bottom: 40px;
+  }
+
+  .contact-main__title {
+    font-size: 2.4rem;
+    letter-spacing: 0.08em;
+  }
+
+  .contact-main__desc {
+    font-size: 0.8rem;
+    line-height: 1.85;
+  }
+
+  /* ─ Form Card ─ */
+  .contact-form {
+    padding: 36px 24px 40px;
+  }
+
+  .contact-form__btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 15px 24px;
+  }
+
+  /* ─ Footer ─ */
+  .site-footer {
+    padding: 32px 0;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .site-footer__name {
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .site-footer__links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+
+  .site-footer__copy {
+    font-size: 0.6rem;
+    line-height: 1.7;
+  }
+}
